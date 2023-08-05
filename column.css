@@ -1,0 +1,18 @@
+/* Define a new counter called "index" */
+table {
+    counter-reset: index;
+  }
+  
+  /* Increment the "index" counter for each row in the table */
+  tr {
+    counter-increment: index;
+  }
+  
+  /* Style the content of the "index" counter */
+  td:first-child::before {
+    content: counter(index);
+  }
+
+  table {
+    counter-reset: index -1;
+  }
